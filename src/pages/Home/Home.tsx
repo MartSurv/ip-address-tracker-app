@@ -1,7 +1,9 @@
 import { useState } from "react";
 
-import { Header } from "../../components/Header";
-import { Map } from "../../components/Map";
+import { ErrorMessage } from "../../components/atoms/ErrorMessage";
+import { Map } from "../../components/atoms/Map";
+import { PageLoader } from "../../components/atoms/PageLoader";
+import { Header } from "../../components/molecules/Header";
 import useGetGeolocation from "../../hooks/useGetGeolocation";
 import { Layout } from "../../templates/Layout";
 
@@ -18,13 +20,15 @@ export const Home: React.FC = () => {
 
   return (
     <Layout>
+      {loading && <PageLoader />}
       <Header
         data={data}
         searchValue={searchValue}
         onSearch={handleSearch}
         onSearchButtonClick={handleSearchButtonClick}
       />
-      <Map data={data} />
+      {error && <ErrorMessage message={error.message} />}
+      {data?.location && <Map data={data.location} />}
     </Layout>
   );
 };

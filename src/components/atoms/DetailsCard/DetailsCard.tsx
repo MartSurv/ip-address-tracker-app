@@ -1,5 +1,5 @@
 import styles from "./DetailsCard.module.css";
-import { Geolocation } from "../../types/geolocation";
+import { Geolocation } from "../../../types/geolocation";
 
 type DetailProps = {
   title?: string;
@@ -20,6 +20,10 @@ type DetailsCardProps = {
 };
 
 export const DetailsCard: React.FC<DetailsCardProps> = ({ data }) => {
+  if (!data?.location) {
+    return null;
+  }
+
   const location = [
     data?.location.city,
     data?.location.country,
@@ -28,16 +32,16 @@ export const DetailsCard: React.FC<DetailsCardProps> = ({ data }) => {
     .filter(Boolean)
     .join(", ");
 
-  if (!data) {
-    return null;
-  }
-
   return (
     <article className={styles.detailsCard}>
-      <Detail title="ip address" data={data.ip} />
-      <Detail title="location" data={location} />
-      <Detail title="timezone" data={`UTC ${data?.location.timezone}`} />
-      <Detail title="isp" data={data?.isp} />
+      <div className={styles.detailsCardPart}>
+        <Detail title="ip address" data={data.ip} />
+        <Detail title="location" data={location} />
+      </div>
+      <div className={styles.detailsCardPart}>
+        <Detail title="timezone" data={`UTC ${data?.location.timezone}`} />
+        <Detail title="isp" data={data?.isp} />
+      </div>
     </article>
   );
 };

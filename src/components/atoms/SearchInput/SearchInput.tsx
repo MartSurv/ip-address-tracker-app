@@ -1,5 +1,5 @@
 import styles from "./SearchInput.module.css";
-import arrowRightSrc from "../../assets/images/arrow-right.svg";
+import arrowRightSrc from "../../../assets/images/arrow-right.svg";
 
 type SearchInputProps = {
   value?: string;

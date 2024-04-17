@@ -1,7 +1,7 @@
 import styles from "./Header.module.css";
-import { Geolocation } from "../../types/geolocation";
-import { DetailsCard } from "../DetailsCard";
-import { SearchInput } from "../SearchInput";
+import { Geolocation } from "../../../types/geolocation";
+import { DetailsCard } from "../../atoms/DetailsCard";
+import { SearchInput } from "../../atoms/SearchInput";
 
 type HeaderProps = {
   data?: Geolocation;

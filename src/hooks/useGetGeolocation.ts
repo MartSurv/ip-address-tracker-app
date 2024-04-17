@@ -6,7 +6,7 @@ import { Geolocation } from "../types/geolocation";
 const useGetGeolocation = () => {
   const [data, setData] = useState<Geolocation>();
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState<Error>();
 
   const fetch = useCallback((searchTerm?: string) => {
     getGeolocation(searchTerm)
@@ -14,8 +14,9 @@ const useGetGeolocation = () => {
         setData(data);
         setLoading(false);
       })
-      .catch(() => {
-        setError(true);
+      .catch((e: Error) => {
+        setLoading(false);
+        setError(e);
       });
   }, []);
 

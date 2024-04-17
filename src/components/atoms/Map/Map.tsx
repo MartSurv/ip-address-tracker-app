@@ -8,10 +8,10 @@ import "leaflet/dist/leaflet.css";
 import { useEffect, useState } from "react";
 
 import styles from "./Map.module.css";
-import { Geolocation } from "../../types/geolocation";
+import { Location } from "../../../types/geolocation";
 
 type MapProps = {
-  data?: Geolocation;
+  data?: Location;
 };
 
 export const Map: React.FC<MapProps> = ({ data }) => {
@@ -23,9 +23,7 @@ export const Map: React.FC<MapProps> = ({ data }) => {
 
   useEffect(() => {
     if (data && map) {
-      const {
-        location: { lat, lng },
-      } = data;
+      const { lat, lng } = data;
 
       map.setView([lat, lng], 13);
 

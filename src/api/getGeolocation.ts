@@ -20,5 +20,9 @@ export const getGeolocation = async (
     `https://geo.ipify.org/api/v2/country,city?${query}`
   );
 
+  if (!response.ok) {
+    throw new Error(response.status.toString());
+  }
+
   return response.json();
 };

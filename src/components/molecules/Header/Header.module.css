@@ -1,7 +1,8 @@
 .header {
+  padding: 0 24px;
   padding-top: 24px;
   height: 280px;
-  background-image: url("../../assets/images/pattern-bg-desktop.png");
+  background-image: url("../../../assets/images/pattern-bg-desktop.png");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -17,7 +18,7 @@
 }
 
 .detailsCardWrapper {
-  position: absolute;
-  bottom: -25%;
+  position: relative;
+  bottom: -9%;
   z-index: 1;
 }

@@ -1,6 +1,8 @@
 .inputWrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .input {
@@ -19,6 +21,7 @@
 }
 
 .button {
+  flex-shrink: 0;
   height: 58px;
   width: 58px;
   border: none;
