@@ -4,6 +4,7 @@ import { DetailsCard } from "../../atoms/DetailsCard";
 import { SearchInput } from "../../atoms/SearchInput";
 
 type HeaderProps = {
+  errorMessage?: string;
   data?: Geolocation;
   searchValue?: string;
   onSearch?: React.ChangeEventHandler<HTMLInputElement>;
@@ -11,6 +12,7 @@ type HeaderProps = {
 };
 
 export const Header: React.FC<HeaderProps> = ({
+  errorMessage,
   data,
   searchValue,
   onSearch,
@@ -25,7 +27,7 @@ export const Header: React.FC<HeaderProps> = ({
         onButtonClick={onSearchButtonClick}
       />
       <div className={styles.detailsCardWrapper}>
-        <DetailsCard data={data} />
+        <DetailsCard data={data} errorMessage={errorMessage} />
       </div>
     </header>
   );

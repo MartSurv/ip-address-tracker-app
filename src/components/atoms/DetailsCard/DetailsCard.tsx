@@ -1,5 +1,6 @@
 import styles from "./DetailsCard.module.css";
 import { Geolocation } from "../../../types/geolocation";
+import { ErrorMessage } from "../ErrorMessage";
 
 type DetailProps = {
   title?: string;
@@ -17,9 +18,13 @@ const Detail: React.FC<DetailProps> = ({ title, data }) => {
 
 type DetailsCardProps = {
   data?: Geolocation;
+  errorMessage?: string;
 };
 
-export const DetailsCard: React.FC<DetailsCardProps> = ({ data }) => {
+export const DetailsCard: React.FC<DetailsCardProps> = ({
+  data,
+  errorMessage,
+}) => {
   if (!data?.location) {
     return null;
   }
@@ -34,14 +39,20 @@ export const DetailsCard: React.FC<DetailsCardProps> = ({ data }) => {
 
   return (
     <article className={styles.detailsCard}>
-      <div className={styles.detailsCardPart}>
-        <Detail title="ip address" data={data.ip} />
-        <Detail title="location" data={location} />
-      </div>
-      <div className={styles.detailsCardPart}>
-        <Detail title="timezone" data={`UTC ${data?.location.timezone}`} />
-        <Detail title="isp" data={data?.isp} />
-      </div>
+      {errorMessage ? (
+        <ErrorMessage message={errorMessage} />
+      ) : (
+        <>
+          <div className={styles.detailsCardPart}>
+            <Detail title="ip address" data={data.ip} />
+            <Detail title="location" data={location} />
+          </div>
+          <div className={styles.detailsCardPart}>
+            <Detail title="timezone" data={`UTC ${data?.location.timezone}`} />
+            <Detail title="isp" data={data?.isp} />
+          </div>
+        </>
+      )}
     </article>
   );
 };

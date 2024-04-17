@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import { ErrorMessage } from "../../components/atoms/ErrorMessage";
 import { Map } from "../../components/atoms/Map";
 import { PageLoader } from "../../components/atoms/PageLoader";
 import { Header } from "../../components/molecules/Header";
@@ -18,17 +17,19 @@ export const Home: React.FC = () => {
     fetch(searchValue);
   };
 
+  console.log(loading);
+
   return (
     <Layout>
       {loading && <PageLoader />}
       <Header
         data={data}
+        errorMessage={error?.message}
         searchValue={searchValue}
         onSearch={handleSearch}
         onSearchButtonClick={handleSearchButtonClick}
       />
-      {error && <ErrorMessage message={error.message} />}
-      {data?.location && <Map data={data.location} />}
+      {data?.location && !error && <Map data={data.location} />}
     </Layout>
   );
 };
