@@ -1,5 +1,7 @@
+import { Home } from "./pages/Home";
+
 const App: React.FC = () => {
-  return <div>Hello</div>;
+  return <Home />;
 };
 
 export default App;

@@ -1,0 +1,23 @@
+.header {
+  padding-top: 24px;
+  height: 280px;
+  background-image: url("../../assets/images/pattern-bg-desktop.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.title {
+  font-weight: 600;
+  color: #fff;
+  font-size: 32px;
+}
+
+.detailsCardWrapper {
+  position: absolute;
+  bottom: -25%;
+  z-index: 1;
+}

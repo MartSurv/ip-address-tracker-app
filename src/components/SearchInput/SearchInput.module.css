@@ -1,0 +1,32 @@
+.inputWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  padding: 18px 24px;
+  width: 500px;
+  height: 58px;
+  border: none;
+  border-top-left-radius: var(--border-radius-default);
+  border-bottom-left-radius: var(--border-radius-default);
+}
+
+.input::placeholder {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  height: 58px;
+  width: 58px;
+  border: none;
+  background-color: #000;
+  border-top-right-radius: var(--border-radius-default);
+  border-bottom-right-radius: var(--border-radius-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

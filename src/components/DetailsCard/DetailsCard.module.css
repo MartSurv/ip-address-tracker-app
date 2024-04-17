@@ -1,0 +1,32 @@
+.detailsCard {
+  display: flex;
+  gap: 32px;
+  background-color: #fff;
+  border-radius: var(--border-radius-default);
+  width: 100%;
+  padding: 32px 0;
+}
+
+.detailWrapper {
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.detailWrapper:first-child {
+  border: none;
+}
+
+.detailTitle {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.detailData {
+  font-size: 26px;
+  font-weight: 500;
+}
