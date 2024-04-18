@@ -33,6 +33,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS
-- [React](https://reactjs.org/) - JS library
-- Yarn
-- Vite
+- JavaScript/TypeScript
+- [React](https://reactjs.org/)
+- [Yarn](https://yarnpkg.com/)
+- [Vite](https://vitejs.dev/)
