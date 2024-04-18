@@ -5,10 +5,10 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-  - [Built with](#built-with)
+- [The challenge](#the-challenge)
+- [Screenshot](#screenshot)
+- [Links](#links)
+- [Built with](#built-with)
 
 ## Overview
 
@@ -34,3 +34,5 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS
 - [React](https://reactjs.org/) - JS library
+- Yarn
+- Vite
