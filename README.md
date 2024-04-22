@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-![screencapture-localhost-5173-2024-04-18-09_54_31](https://github.com/MartSurv/ip-address-tracker-app/assets/47948087/3b35af52-8a68-445d-a183-9c98aea2f818)
+![smartmockups_lvb9fj96](https://github.com/MartSurv/ip-address-tracker-app/assets/47948087/b09a705b-5e5c-426b-a02f-fa71c12f9141)
 
 ### Links
 
